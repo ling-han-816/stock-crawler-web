@@ -8,7 +8,7 @@ from datetime import datetime
 
 # --- 網頁頁面配置 ---
 st.set_page_config(page_title="台股分析網頁", layout="wide")
-st.title("📈 我的台股自動化查詢系統")
+st.title("📈 台股自動化查詢系統")
 
 # --- 使用者輸入框 (放在側邊欄) ---
 with st.sidebar:
