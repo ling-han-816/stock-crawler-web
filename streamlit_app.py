@@ -54,7 +54,7 @@ if st.button("🚀 開始查詢股市資料"):
         tab1, tab2, tab3 = st.tabs(["📊 歷史圖表", "📋 即時數據", "📰 相關新聞"])
 
         with tab1:
-            st.subheader("yfinance 股價走勢")
+            # st.subheader("yfinance 股價走勢")
             # 對應你 Colab 第 12 步
             target = f"{stock_id}.TW"
             df_yf = yf.download(target, period="6mo")
