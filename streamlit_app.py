@@ -51,7 +51,7 @@ if st.button("🚀 開始查詢股市資料"):
     
     with st.spinner(f"正在抓取 {stock_id} 的最新資訊..."):
         # 分成三個頁籤顯示
-        tab1, tab2, tab3 = st.tabs(["📊 歷史圖表", "📋 即時數據", "📰 相關新聞"])
+        tab1, tab2, tab3 = st.tabs(["📊 歷史數據", "📋 即時數據", "📰 相關新聞"])
 
         with tab1:
             # st.subheader("yfinance 股價走勢")
@@ -59,7 +59,7 @@ if st.button("🚀 開始查詢股市資料"):
             target = f"{stock_id}.TW"
             df_yf = yf.download(target, period="6mo")
             if not df_yf.empty:
-                st.line_chart(df_yf['Close'])
+                # st.line_chart(df_yf['Close'])
                 st.dataframe(df_yf.tail(10), use_container_width=True)
             else:
                 st.error("找不到該股票的歷史資料。")
